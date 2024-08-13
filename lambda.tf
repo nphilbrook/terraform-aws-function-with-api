@@ -34,7 +34,10 @@ resource "aws_lambda_function" "this" {
   runtime       = "python3.10"
   timeout       = 60
 
-  depends_on = [aws_cloudwatch_log_group.function_group]
+  depends_on = [
+    aws_cloudwatch_log_group.function_group,
+    resource.aws_s3_object.code_zip
+  ]
 
   lifecycle {
     ignore_changes = [s3_bucket, s3_key]
