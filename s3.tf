@@ -8,7 +8,7 @@ module "code_bucket" {
 resource "aws_s3_object" "code_zip" {
   bucket = module.code_bucket.s3_bucket_id
   key    = local.code_object_key
-  source = "${path.module}/function/lambda_function.zip"
+  source = "${path.module}/placeholder_function/lambda_function.zip"
 
   lifecycle {
     ignore_changes = all
