@@ -3,6 +3,7 @@ module "code_bucket" {
   version = "~>4.1.2"
 
   bucket_prefix = "${var.basename}-lambda-code"
+  force_destroy = true
 }
 
 resource "aws_s3_object" "code_zip" {
