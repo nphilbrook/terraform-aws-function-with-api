@@ -6,10 +6,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "~>5.55"
     }
-    # archive = {
-    #   source  = "hashicorp/archive"
-    #   version = "~>2.4"
-    # }
+    github = {
+      source = "integrations/github"
+      version = "~>6.2"
+    }
   }
 }
 
@@ -21,4 +21,8 @@ provider "aws" {
       "source-workspace" = terraform.workspace
     }
   }
+}
+
+provider "github" {
+  owner = "nphilbrook"
 }
