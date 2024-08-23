@@ -14,6 +14,6 @@ That GitHub repo has configuration for an Action that will update the Lambda wit
 This No-code module includes no provider credentials (AWS or Github).
 
 Assumptions/requirements:
-* AWS credentials must be provided to the workspace provisioned by this module (ideally in a HCP Terraform Variable Set). I recommend [Workload Identity](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/dynamic-provider-credentials/aws-configuration)
+* AWS credentials must be provided to the workspace provisioned by this module (ideally in a HCP Terraform Variable Set). I recommend [Workload Identity](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/dynamic-provider-credentials/aws-configuration))
 * GitHub credentiials must also be made available to the workspace, a `GITHUB_TOKEN` environment variable in a Variable Set works.
 * The templated Github Actions YAML in the above repository has a hardcoded AWS account ID - which must be the same as the account used by this module. This should also be abstracted away and set in an additional github_actions_variable resource.
