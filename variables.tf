@@ -30,3 +30,6 @@ variable "api_gateway_logging_level" {
     error_message = "Invalid logging level specified."
   }
 }
+
+# Automatically provided from HCP Terraform
+variable "TFC_WORKSPACE_SLUG" {}
