@@ -10,6 +10,10 @@ terraform {
       source  = "integrations/github"
       version = "~>6.2"
     }
+    tfe = {
+      source  = "hashicorp/tfe"
+      version = "~>0.58"
+    }
   }
 }
 
@@ -25,4 +29,7 @@ provider "aws" {
 
 provider "github" {
   owner = "nphilbrook"
+}
+
+provider "tfe" {
 }
