@@ -32,4 +32,7 @@ variable "api_gateway_logging_level" {
 }
 
 # Automatically provided from HCP Terraform
-variable "TFC_WORKSPACE_SLUG" {}
+variable "TFC_WORKSPACE_SLUG" {
+  type    = string
+  default = ""
+}
