@@ -1,3 +1,9 @@
+# Automatically provided from HCP Terraform
+variable "TFC_WORKSPACE_SLUG" {
+  type    = string
+  default = ""
+}
+
 locals {
   slug_parts = split("/", var.TFC_WORKSPACE_SLUG)
   org_name   = local.slug_parts[0]
