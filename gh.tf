@@ -8,6 +8,10 @@ resource "github_repository" "code" {
     owner      = "nphilbrook"
     repository = "lambda-function-template"
   }
+
+  lifecycle {
+    ignore_changes = [ vulnerability_alerts ]
+  }
 }
 
 resource "github_actions_variable" "bucket_name" {
