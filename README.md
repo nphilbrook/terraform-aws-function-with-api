@@ -9,7 +9,7 @@ And the following GitHub resources:
 * a GitHub repo based off of [this template repository](https://github.com/nphilbrook/lambda-function-template)
 * 2 [GitHub Actions variables](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables) to reference the S3 Bucket and the Lambda function itself
 
-That GitHub repo has configuration for an Action that will update the Lambda with new code, using the S3 bucket
+That GitHub repo has configuration for an Action that will update the Lambda with new code, using the S3 bucket.
 
 This No-code module includes no provider credentials (AWS or Github).
 
