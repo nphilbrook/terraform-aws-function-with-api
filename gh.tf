@@ -10,7 +10,7 @@ resource "github_repository" "code" {
   }
 
   lifecycle {
-    ignore_changes = [ vulnerability_alerts ]
+    ignore_changes = [vulnerability_alerts]
   }
 }
 

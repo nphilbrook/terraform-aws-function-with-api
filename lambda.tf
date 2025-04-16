@@ -17,10 +17,14 @@ data "aws_iam_policy_document" "lambda_assume_role_policy" {
 }
 
 resource "aws_iam_role" "lambda_execution_role" {
-  name                = "${var.basename}-lambda-role"
-  description         = "Execution role for ${var.basename} lambda funtion"
-  assume_role_policy  = data.aws_iam_policy_document.lambda_assume_role_policy.json
-  managed_policy_arns = ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"]
+  name               = "${var.basename}-lambda-role"
+  description        = "Execution role for ${var.basename} lambda funtion"
+  assume_role_policy = data.aws_iam_policy_document.lambda_assume_role_policy.json
+}
+
+resource "aws_iam_role_policy_attachment" "lambda_policy_attachment" {
+  role       = aws_iam_role.lambda_execution_role.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
 
