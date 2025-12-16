@@ -2,7 +2,7 @@ resource "github_repository" "code" {
   name        = "${aws_lambda_function.this.function_name}-code"
   description = "Code for the ${aws_lambda_function.this.function_name} Lambda function."
 
-  visibility = "private"
+  visibility = "public"
 
   template {
     owner      = "nphilbrook"
